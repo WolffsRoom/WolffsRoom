@@ -3,7 +3,7 @@
     <img
       src="https://wolffsroom.wordpress.com/wp-content/uploads/2025/01/logo.png"
       alt="Wolff's Room"
-      width="500"
+      width="550"
     />
   </a>
 </p>
@@ -23,8 +23,6 @@
 
 <br>
 
-<h2 align="center">LANGUAGES</h2>
-
 <p align="center">
   <img src="https://cdn.simpleicons.org/c/8B949E" width="45" height="45" alt="C" title="C">&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/cplusplus/8B949E" width="45" height="45" alt="C++" title="C++">&nbsp;&nbsp;
@@ -42,9 +40,6 @@
 </p>
 
 <br>
-
-<h2 align="center">GAME ENGINES</h2>
-
 <p align="center">
   <img src="https://cdn.simpleicons.org/unity/8B949E" width="45" height="45" alt="Unity" title="Unity">&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/gamemaker/8B949E" width="45" height="45" alt="GameMaker" title="GameMaker">&nbsp;&nbsp;
@@ -58,8 +53,6 @@
 </p>
 
 <br>
-
-<h2 align="center">DAILY CONTRIBUTIONS</h2>
 
 <p align="center">
   <img
