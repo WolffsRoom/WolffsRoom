@@ -56,9 +56,9 @@
 
 <p align="center">
   <img
-    src="https://ghchart.rshah.org/6E7681/WolffsRoom"
-    alt="Wolff's Room contributions"
-  />
+    src="./profile/streak.svg"
+    alt="Wolff's Room contribution streak"
+  >
 </p>
 
 <div align="center">
