@@ -13,11 +13,32 @@
 </p>
 
 <p align="center">
-  <a href="https://wolffsroom.dev">
-    <img src="https://img.shields.io/badge/WOLFFSROOM.DEV-24292F?style=for-the-badge" alt="WolffsRoom.dev">
+  <a href="https://wolffsroom.wordpress.com/">
+    <img
+      src="https://img.shields.io/badge/WOLFF'S_ROOM-24292F?style=for-the-badge&logo=wordpress&logoColor=white"
+      alt="Wolff's Room"
+    >
   </a>
+  &nbsp;
   <a href="https://github.com/WolffsRoom?tab=repositories">
-    <img src="https://img.shields.io/badge/REPOSITORIES-24292F?style=for-the-badge&logo=github&logoColor=white" alt="Repositories">
+    <img
+      src="https://img.shields.io/badge/REPOSITORIES-24292F?style=for-the-badge&logo=github&logoColor=white"
+      alt="Repositories"
+    >
+  </a>
+  &nbsp;
+  <a href="https://www.youtube.com/@WolffsRoom">
+    <img
+      src="https://img.shields.io/badge/YOUTUBE-24292F?style=for-the-badge&logo=youtube&logoColor=white"
+      alt="YouTube"
+    >
+  </a>
+  &nbsp;
+  <a href="https://discord.com/invite/Cca7EHv79">
+    <img
+      src="https://img.shields.io/badge/DISCORD-24292F?style=for-the-badge&logo=discord&logoColor=white"
+      alt="Discord"
+    >
   </a>
 </p>
 
@@ -30,7 +51,6 @@
   <img src="https://cdn.simpleicons.org/gamemaker/8B949E" width="45" height="45" alt="GML" title="GML">&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/godotengine/8B949E" width="45" height="45" alt="GDScript" title="GDScript">
 </p>
-
 <p align="center">
   <code>C</code>&nbsp;&nbsp;
   <code>C++</code>&nbsp;&nbsp;
@@ -39,26 +59,30 @@
   <code>GDScript</code>
 </p>
 
-<br>
 <p align="center">
   <img src="https://cdn.simpleicons.org/unity/8B949E" width="45" height="45" alt="Unity" title="Unity">&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/gamemaker/8B949E" width="45" height="45" alt="GameMaker" title="GameMaker">&nbsp;&nbsp;
-  <img src="https://cdn.simpleicons.org/godotengine/8B949E" width="45" height="45" alt="Godot" title="Godot">&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/godotengine/8B949E" width="45" height="45" alt="Godot" title="Godot">
 </p>
 
 <p align="center">
   <code>Unity</code>&nbsp;&nbsp;
   <code>GameMaker</code>&nbsp;&nbsp;
-  <code>Godot</code>&nbsp;&nbsp;
+  <code>Godot</code>
 </p>
-
-<br>
 
 <p align="center">
   <img
     src="./profile/streak.svg"
     alt="Wolff's Room contribution streak"
   >
+</p>
+
+<p align="center">
+  <img
+    src="https://ghchart.rshah.org/6E7681/WolffsRoom"
+    alt="Wolff's Room contributions"
+  />
 </p>
 
 <div align="center">
