@@ -8,6 +8,10 @@ on:
     paths:
       - ".github/workflows/streak-stats.yml"
 
+concurrency:
+  group: streak-stats
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,4 +35,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/streak.svg
           git commit -m "Update streak stats" || exit 0
-          git push
+          git pull --rebase origin main
+          git push origin main
