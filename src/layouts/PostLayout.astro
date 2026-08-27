@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { data } = Astro.props;
+---
+<BaseLayout title={data.title} description={data.description} image={data.cover}>
+  <article class="article">
+    <a class="back" href={`/${data.category}/`}>← Voltar</a>
+    <span class="tag">{data.category}</span>
+    <h1>{data.title}</h1>
+    <p class="lead">{data.description}</p>
+    <img class="hero-image" src={data.cover} alt={`Capa de ${data.title}`} />
+    <div class="article-content"><slot /></div>
+  </article>
+</BaseLayout>

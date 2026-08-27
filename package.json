@@ -1,0 +1,14 @@
+{
+  "name": "wolffs-room-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site oficial do Wolff's Room — traduções, modificações, ports e análises para PS Vita e consoles retrô.",
+  "repository": "https://github.com/WolffsRoom/WolffsRoom",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": { "@astrojs/sitemap": "^3.2.1", "astro": "^5.13.0" }
+}

@@ -1,0 +1,18 @@
+---
+import { navigation, site } from '../config/site';
+const pathname = Astro.url.pathname;
+---
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="/" aria-label="Wolff's Room — início">
+    <span class="brand-mark">WR</span>
+    <span><strong>{site.name}</strong><small>{site.tagline}</small></span>
+  </a>
+  <nav aria-label="Menu principal">
+    {navigation.map((item) => <a class:list={{ active: pathname === item.href }} href={item.href}>{item.label}</a>)}
+  </nav>
+  <div class="sidebar-footer">
+    <p>Encontre-me também</p>
+    {site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}
+  </div>
+</aside>
+<button class="overlay" id="overlay" aria-label="Fechar menu"></button>

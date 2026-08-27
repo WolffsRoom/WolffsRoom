@@ -1,0 +1,9 @@
+---
+import { site } from '../config/site';
+---
+<footer class="footer">
+  <strong>{site.name}</strong>
+  <p>{site.tagline}</p>
+  <div>{site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}</div>
+  <small>© {new Date().getFullYear()} Wolff's Room.</small>
+</footer>

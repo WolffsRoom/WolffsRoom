@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+export function getStaticPaths() {
+  const categories = { traducoes: ['Traduções', 'Traduções em português brasileiro'], mods: ['Mods', 'Modificações e patches'], ports: ['Ports', 'Projetos adaptados para novas plataformas'], analises: ['Análises', 'Opiniões e avaliações de jogos'] };
+  return Object.entries(categories).map(([category, copy]) => ({ params: { category }, props: { copy } }));
+}
+const { category } = Astro.params;
+const { copy } = Astro.props;
+const posts = (await getCollection('posts', ({ data }) => !data.draft && data.category === category)).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title={copy[0]} description={copy[1]}><section class="page-title"><span class="eyebrow">ACERVO</span><h1>{copy[0]}</h1><p>{copy[1]}</p></section><section class="section"><div class="post-grid">{posts.map((post) => <PostCard post={post} />)}</div>{posts.length === 0 && <p class="empty">Nenhuma publicação cadastrada nesta categoria.</p>}</section></BaseLayout>

@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout>
+  <section class="intro"><span class="eyebrow">BEM-VINDO À TOCA</span><h1>Traduções, modificações<br/><em>e muito mais.</em></h1><p>Projetos, ports e análises para PS Vita e consoles retrô.</p></section>
+  <section class="section"><div class="section-heading"><div><span class="eyebrow">ATUALIZAÇÕES</span><h2>Últimas novidades</h2></div></div><div class="post-grid">{posts.slice(0, 6).map((post) => <PostCard post={post} />)}</div></section>
+</BaseLayout>
