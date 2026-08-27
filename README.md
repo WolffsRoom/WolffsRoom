@@ -1,6 +1,5 @@
-<a href="https://github.com/WolffsRoom">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode.svg">
-    <img alt="Wolff's GitHub Profile README" src="./light_mode.svg">
-  </picture>
-</a>
+# Wolff's Room
+
+Site estático oficial criado com Astro e publicado automaticamente pelo Cloudflare Workers.
+
+Para criar um post, execute `CRIAR_POST.bat`. Para validar e enviar os posts ao GitHub, execute `PUBLICAR_POSTS.bat`.

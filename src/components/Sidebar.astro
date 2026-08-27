@@ -1,6 +1,7 @@
 ---
 import { navigation, site } from '../config/site';
 const pathname = Astro.url.pathname;
+const icons = ['house', 'language', 'wand-magic-sparkles', 'gamepad', 'newspaper', 'user', 'circle-question', 'bug'];
 ---
 <aside class="sidebar-wolf" id="sidebarWolf">
   <div class="sidebar-header">
@@ -13,7 +14,7 @@ const pathname = Astro.url.pathname;
   <div class="sidebar-widget">
     <h4 class="widget-title">Menu Principal</h4>
     <nav class="sidebar-nav" aria-label="Menu principal">
-      {navigation.map((item) => <a class:list={{ active: pathname === item.href }} href={item.href}>{item.label}</a>)}
+      {navigation.map((item, index) => <a class:list={{ active: pathname === item.href }} href={item.href} aria-current={pathname === item.href ? 'page' : undefined}><i class={`fa-solid fa-${icons[index]}`} aria-hidden="true"></i>{item.label}</a>)}
     </nav>
   </div>
   <div class="sidebar-widget">
@@ -27,7 +28,9 @@ const pathname = Astro.url.pathname;
   <div class="sidebar-widget">
     <h4 class="widget-title">Redes Sociais</h4>
     <div class="sidebar-socials">
-      {site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}
+      <a href={site.socials[0].href} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+      <a href={site.socials[1].href} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-reddit" aria-hidden="true"></i>Reddit</a>
+      <a href={site.socials[2].href} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i>YouTube</a>
     </div>
   </div>
 </aside>

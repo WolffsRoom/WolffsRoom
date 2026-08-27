@@ -1,0 +1,26 @@
+{
+  "path": "Traduções/De Outras Equipes/the-wolf-among-us",
+  "title": "The Wolf Among Us [PSVITA]",
+  "description": "Tradução completa em português brasileiro para The Wolf Among Us no PlayStation Vita.",
+  "category": "traducoes", "section": "De Outras Equipes", "author": "Wolff", "date": "2026-02-23",
+  "cover": "https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/wolf_capa.png", "platform": "PSVITA", "status": "Finalizada", "tags": ["GameLab", "Terceiros", "Traduções"], "featured": true, "draft": false,
+  "presentation": [
+    "Nesta magnífica obra da Telltale Games, você assume o papel de Bigby Wolf, o xerife de Fabletown, encarregado de manter a ordem entre personagens dos contos de fadas que vivem escondidos no mundo real.",
+    "Com forte foco narrativo e desenvolvimento de personagens, o jogo coloca o jogador diante de escolhas morais complexas, onde cada decisão influencia diretamente os rumos da história e a forma como Bigby é visto. Uma experiência sombria e envolvente sobre poder, identidade e consequências, disponível agora no PlayStation Vita com tradução completa em português brasileiro pela GameLab Traduções."
+  ],
+  "game": { "title": "The Wolf Among Us", "developer": "Telltale Games", "publisher": "Telltale Games", "genre": "Aventura narrativa", "release": "11 de outubro de 2013", "titleId": "PCSE00352", "version": "PS Vita", "language": "Português brasileiro" },
+  "projectLogo": "https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/gamelab-1.png",
+  "projectIntro": ["Projeto de tradução, revisão e porte para a versão de PlayStation Vita."],
+  "credits": ["Tribo Gamer — Tradução.", "Heitor Spectre — Ferramenta, revisão e porte.", "Heitor Spectre e Carlos — Texturas.", "LucasSaragosa, Den Em, BlueSkyWestSide e Pashok6798 — Ferramenta."],
+  "thanks": ["André — Tutorial de instalação.", "Wolff — Testes e ajustes no patch."],
+  "observations": ["Revisão completa da tradução da Tribo Gamer, com novos contextos, ajustes em texturas e correção de nomes que não haviam sido traduzidos.", "Correções ortográficas e gramaticais em todo o jogo."],
+  "extras": [{ "title": "Menu de depuração", "text": "O menu de depuração está habilitado. Basta pressionar Select para acessar.", "image": "https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195652-284304.png" }],
+  "progress": [{"label":"Conclusão total","percent":100},{"label":"Scripts","percent":100,"detail":"Tradução dos diálogos."},{"label":"Ortografia","percent":100,"detail":"Revisão de textos."},{"label":"Gráficos","percent":100,"detail":"Edição de texturas."},{"label":"Cinemáticas","percent":100,"detail":"Legendas de vídeo."},{"label":"Testes","percent":100,"detail":"Validação in-game."}],
+  "gallery": [
+    {"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-202730-617848.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195250-164333.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195306-191536.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195433-878118.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195531-520741.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-195609-373948.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-202822-426147.png","alt":"Captura do jogo"},{"src":"https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/2026-02-22-202830-917814.png","alt":"Captura do jogo"}
+  ],
+  "installation": ["Baixe o arquivo da tradução.", "Extraia o conteúdo da tradução em uma pasta no computador.", "Conecte o PS Vita ao computador via USB ou FTP.", "Copie a pasta “rePatch”, localizada na pasta “CONSOLE”, para a raiz do armazenamento do PS Vita (ux0).", "Reinicie o PS Vita.", "Abra o jogo normalmente."],
+  "installationNotes": ["A tradução é aplicada usando o plugin rePatch. Caso ainda não o tenha instalado, consulte a seção FAQ do site.", "Para evitar conflitos, é recomendado iniciar um novo jogo após instalar a tradução."],
+  "downloads": [{"label":"Google Drive","url":"https://drive.google.com/file/d/15wPBd36wCPJnXkCQxTQ8Kk_lovv4AU-p/view?usp=sharing"},{"label":"MEGA.NZ","url":"https://mega.nz/file/9otQDLYR#TqVqHv7MGhEdrEgTdc9k_2rNXwgqFdUuT5fB0Tk4u3s"},{"label":"MediaFire","url":"https://www.mediafire.com/file/j4m92448sonzci1/Tradu%25C3%25A7%25C3%25A3o_-_The_Wolf_Among_Us_%2528PS_Vita%2529.rar/file"}],
+  "tools": [{"label":"TTG-Tools","url":"https://github.com/HeitorSpectre/TTG-Tools"},{"label":"Notepad++","url":"https://notepad-plus-plus.org/"}]
+}

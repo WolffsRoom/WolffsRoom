@@ -1,14 +1,22 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { data } = Astro.props;
+const date = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(data.date);
+const info = [['Desenvolvedora', data.game.developer], ['Publicadora', data.game.publisher], ['Gênero', data.game.genre], ['Lançamento', data.game.release], ['Title ID', data.game.titleId], ['Versão', data.game.version], ['Idioma', data.game.language]].filter(([, value]) => value);
 ---
 <BaseLayout title={data.title} description={data.description} image={data.cover}>
-  <article class="post-single-container">
-    <a class="back" href={`/${data.category}/`}>← Voltar</a>
-    <span class="post-category-tag">{data.category}</span>
-    <h1 class="post-single-title">{data.title}</h1>
-    <p class="post-single-subtitle">{data.description}</p>
-    <img class="post-featured-image" src={data.cover} alt={`Capa de ${data.title}`} />
-    <div class="post-content"><slot /></div>
-  </article>
+<main class="main-body-content"><article class="post-single-container rich-post">
+  <a class="back" href={`/${data.category}/`}>← Voltar</a>
+  <header class="post-header-area"><div class="post-meta-tags"><span class="post-tag-badge psvita">{data.platform}</span>{data.section && <span class="post-tag-badge">{data.section}</span>}{data.tags.map((tag) => <span class="post-tag-badge">{tag}</span>)}</div><h1 class="post-single-title">{data.title}</h1><p class="post-single-subtitle">{data.description}</p><div class="post-author-date"><span><i class="fa-solid fa-user"></i> {data.author}</span><time><i class="fa-regular fa-calendar"></i> {date}</time></div></header>
+  <section class="post-section intro-grid"><div><h2>Apresentação do jogo</h2>{data.presentation.map((p) => <p>{p}</p>)}</div><img class="post-cover" src={data.cover} alt={`Capa de ${data.title}`} /></section>
+  <section class="post-section"><h2>Informações do jogo</h2><div class="game-info-grid">{info.map(([label, value]) => <div><span>{label}</span><strong>{value}</strong></div>)}</div></section>
+  {(data.projectIntro.length || data.credits.length || data.thanks.length) > 0 && <section class="post-section project-section"><h2>Sobre o projeto</h2>{data.projectLogo && <img class="project-logo" src={data.projectLogo} alt="Logo da equipe do projeto" />}{data.projectIntro.map((p) => <p>{p}</p>)}{data.credits.length > 0 && <><h3>Créditos</h3><ul>{data.credits.map((x) => <li>{x}</li>)}</ul></>}{data.thanks.length > 0 && <><h3>Agradecimentos especiais</h3><ul>{data.thanks.map((x) => <li>{x}</li>)}</ul></>}</section>}
+  {data.observations.length > 0 && <section class="post-section"><h2>Observações</h2><ul class="check-list">{data.observations.map((x) => <li>{x}</li>)}</ul></section>}
+  {data.extras.map((extra) => <details class="post-extra"><summary>{extra.title}</summary><p>{extra.text}</p>{extra.image && <img src={extra.image} alt={extra.title} />}</details>)}
+  {data.progress.length > 0 && <section class="post-section"><h2>Andamento</h2><div class="progress-list">{data.progress.map((item) => <div class="progress-item"><div class="progress-label"><strong>{item.label}</strong><span>{item.percent}%</span></div><div class="progress-track"><span style={`width:${item.percent}%`}></span></div>{item.detail && <small>{item.detail}</small>}</div>)}</div></section>}
+  {data.gallery.length > 0 && <section class="post-section"><h2>Galeria de imagens</h2><p>Confira algumas capturas de tela tiradas durante o jogo:</p><div class="post-gallery">{data.gallery.map((img, i) => <a href={img.src} target="_blank"><img src={img.src} alt={img.alt || `${data.title} — imagem ${i + 1}`} loading="lazy" /></a>)}</div></section>}
+  {data.installation.length > 0 && <section class="post-section"><h2>Instruções para instalação</h2><ol class="install-steps">{data.installation.map((x) => <li>{x}</li>)}</ol>{data.installationNotes.map((x) => <div class="post-notice"><i class="fa-solid fa-triangle-exclamation"></i><p>{x}</p></div>)}</section>}
+  {data.downloads.length > 0 && <section class="post-section"><h2>Downloads</h2><div class="download-grid">{data.downloads.map((item) => <a class="download-card" href={item.url} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i><span><strong>{item.label}</strong>{item.description && <small>{item.description}</small>}</span></a>)}</div></section>}
+  {data.tools.length > 0 && <section class="post-section"><h2>Ferramentas utilizadas</h2><p>Durante o desenvolvimento desse projeto, foram utilizadas as seguintes ferramentas e programas:</p><div class="tools-list">{data.tools.map((tool) => <a href={tool.url} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-screwdriver-wrench"></i><span><strong>{tool.label}</strong>{tool.description && <small>{tool.description}</small>}</span></a>)}</div></section>}
+</article></main>
 </BaseLayout>

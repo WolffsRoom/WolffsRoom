@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title="Buscar">
+  <div class="main-body-content">
+    <div class="section-badge-title"><h2>RESULTADOS DA BUSCA</h2></div>
+    <section class="section-block">
+      <p id="searchSummary" class="search-summary">Digite um termo na barra de pesquisa.</p>
+      <div id="searchResults" class="cards-grid-wolf">
+        {posts.map((post) => { const href = `/Posts/${post.data.path}/`; return <article class="card-wolf search-result" data-search={`${post.data.title} ${post.data.description} ${post.data.category} ${post.data.platform} ${post.data.tags.join(' ')}`.toLocaleLowerCase('pt-BR')} hidden><a class="card-thumb" href={href}><img src={post.data.cover} alt={post.data.title} /></a><div class="card-content"><span class="news-tag">{post.data.category}</span><h2 class="card-title-wolf"><a href={href}>{post.data.title}</a></h2><p>{post.data.description}</p><a class="btn-details" href={href}>Ver mais detalhes</a></div></article> })}
+      </div>
+      <div id="noResults" class="empty-state" hidden><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><h3>Nenhuma publicação encontrada</h3><p>Tente outro título, categoria ou plataforma.</p></div>
+    </section>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get('q') || '').trim().toLocaleLowerCase('pt-BR');
+    const results = Array.from(document.querySelectorAll<HTMLElement>('.search-result'));
+    const summary = document.querySelector('#searchSummary');
+    const noResults = document.querySelector<HTMLElement>('#noResults');
+    const input = document.querySelector<HTMLInputElement>('#searchInput');
+    if (input) input.value = params.get('q') || '';
+    let matches = 0;
+    for (const result of results) {
+      const visible = query.length > 0 && (result.dataset.search || '').includes(query);
+      result.hidden = !visible;
+      if (visible) matches++;
+    }
+    if (summary) summary.textContent = query ? `${matches} resultado(s) para “${params.get('q')}”` : 'Digite um termo na barra de pesquisa.';
+    if (noResults) noResults.hidden = !(query.length > 0 && matches === 0);
+  </script>
+</BaseLayout>
