@@ -2,17 +2,33 @@
 import { navigation, site } from '../config/site';
 const pathname = Astro.url.pathname;
 ---
-<aside class="sidebar" id="sidebar">
-  <a class="brand" href="/" aria-label="Wolff's Room — início">
-    <span class="brand-mark">WR</span>
-    <span><strong>{site.name}</strong><small>{site.tagline}</small></span>
-  </a>
-  <nav aria-label="Menu principal">
-    {navigation.map((item) => <a class:list={{ active: pathname === item.href }} href={item.href}>{item.label}</a>)}
-  </nav>
-  <div class="sidebar-footer">
-    <p>Encontre-me também</p>
-    {site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}
+<aside class="sidebar-wolf" id="sidebarWolf">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-logo-link">
+      <img src="https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/cropped-logosite.png" alt="Wolff's Room Logo" class="sidebar-logo-img" />
+      <img src="https://wolffsroom.wordpress.com/wp-content/uploads/2025/01/logo.png" alt="Wolff's Room" class="sidebar-title-logo-img" />
+    </a>
+    <p class="sidebar-subtitle">{site.tagline}</p>
+  </div>
+  <div class="sidebar-widget">
+    <h4 class="widget-title">Menu Principal</h4>
+    <nav class="sidebar-nav" aria-label="Menu principal">
+      {navigation.map((item) => <a class:list={{ active: pathname === item.href }} href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+  <div class="sidebar-widget">
+    <h4 class="widget-title">Explore também</h4>
+    <div class="partner-buttons">
+      <a href="https://joao13traducoes.com/" target="_blank" rel="noopener" class="partner-btn">João13 Traduções</a>
+      <a href="https://www.miltraducoes.com/" target="_blank" rel="noopener" class="partner-btn">M.I.L. Traduções</a>
+      <a href="https://www.centraldetraducoes.net.br/" target="_blank" rel="noopener" class="partner-btn">Central das Traduções</a>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+    <h4 class="widget-title">Redes Sociais</h4>
+    <div class="sidebar-socials">
+      {site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}
+    </div>
   </div>
 </aside>
-<button class="overlay" id="overlay" aria-label="Fechar menu"></button>
+<button class="sidebar-overlay" id="sidebarOverlay" aria-label="Fechar menu"></button>

@@ -18,28 +18,32 @@ const fullTitle = title === site.name ? title : `${title} — ${site.name}`;
     <meta property="og:type" content="website" />
     {image && <meta property="og:image" content={image} />}
     <title>{fullTitle}</title>
-    <script is:inline>
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') document.documentElement.dataset.theme = 'light';
-    </script>
+    <link rel="icon" type="image/png" href="https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/cropped-logosite.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
   </head>
   <body>
     <Sidebar />
-    <div class="page-shell">
+    <div class="content-wrapper">
       <Header />
       <main><slot /></main>
       <Footer />
     </div>
     <script>
-      const sidebar = document.querySelector('#sidebar');
-      const overlay = document.querySelector('#overlay');
-      const toggleMenu = () => { sidebar?.classList.toggle('open'); overlay?.classList.toggle('open'); };
-      document.querySelector('#menuButton')?.addEventListener('click', toggleMenu);
+      const sidebar = document.querySelector('#sidebarWolf');
+      const overlay = document.querySelector('#sidebarOverlay');
+      const toggleMenu = () => { sidebar?.classList.toggle('active'); overlay?.classList.toggle('active'); };
+      document.querySelector('#menuToggle')?.addEventListener('click', toggleMenu);
       overlay?.addEventListener('click', toggleMenu);
-      document.querySelector('#themeButton')?.addEventListener('click', () => {
-        const light = document.documentElement.dataset.theme !== 'light';
-        document.documentElement.dataset.theme = light ? 'light' : 'dark';
+      const themeButton = document.querySelector('#themeToggle');
+      const applyThemeLabel = () => { if (themeButton) themeButton.textContent = document.body.classList.contains('light-mode') ? 'Modo Escuro' : 'Modo Claro'; };
+      if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');
+      applyThemeLabel();
+      themeButton?.addEventListener('click', () => {
+        const light = document.body.classList.toggle('light-mode');
         localStorage.setItem('theme', light ? 'light' : 'dark');
+        applyThemeLabel();
       });
     </script>
   </body>

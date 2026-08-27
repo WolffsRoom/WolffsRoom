@@ -21,7 +21,12 @@ O resultado será criado em `dist/`.
 
 Crie um arquivo `.md` em uma das pastas de `src/content/posts/`. Use `deltarune.md` como modelo. As listagens e páginas de categoria são geradas automaticamente.
 
-Antes da publicação, altere `site` em `astro.config.mjs` para o domínio definitivo.
+O endereço atual está configurado em `astro.config.mjs`. Quando adquirir um domínio próprio, substitua-o pelo novo endereço.
+
+## Publicação no Cloudflare
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler@latest deploy --assets ./dist --name wolffsroom --compatibility-date 2026-08-26`
 
 ## Enviar ao GitHub
 

@@ -2,12 +2,12 @@
 const { post } = Astro.props;
 const categoryLabels = { traducoes: 'Tradução', mods: 'Modificação', ports: 'Port', analises: 'Análise' };
 ---
-<article class="post-card">
-  <a class="post-cover" href={`/posts/${post.id}/`}><img src={post.data.cover} alt="" loading="lazy" /></a>
-  <div class="post-card-body">
-    <span class="tag">{categoryLabels[post.data.category]}</span>
-    <h2><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2>
+<article class="card-wolf">
+  <a class="card-thumb" href={`/posts/${post.id}/`}><img src={post.data.cover} alt={post.data.title} loading="lazy" /></a>
+  <div class="card-content">
+    <span class="news-tag">{categoryLabels[post.data.category]}</span>
+    <h2 class="card-title-wolf"><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2>
     <p>{post.data.description}</p>
-    <a class="read-more" href={`/posts/${post.id}/`}>Ver mais detalhes →</a>
+    <a class="btn-details" href={`/posts/${post.id}/`}>Ver mais detalhes</a>
   </div>
 </article>

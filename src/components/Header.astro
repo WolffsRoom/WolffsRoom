@@ -1,8 +1,14 @@
-<header class="topbar">
-  <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
-  <a class="mobile-brand" href="/">WOLFF'S ROOM</a>
-  <div class="actions">
-    <button id="themeButton" type="button">Alternar tema</button>
-    <a class="report" href="/relatar-erro/">Relatar erro</a>
+<header class="top-header">
+  <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menu">☰</button>
+  <div class="search-bar-wolf">
+    <form role="search" action="/" method="get">
+      <input type="search" id="searchInput" name="q" placeholder="O que você procura na toca do lobo?" />
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+  </div>
+  <div class="quick-actions">
+    <a href="/faq/" class="btn-quick black">FAQ</a>
+    <button class="theme-toggle-btn" id="themeToggle" type="button">Modo Claro</button>
+    <a href="/relatar-erro/" class="btn-quick light">RELATAR ERRO</a>
   </div>
 </header>

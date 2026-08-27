@@ -1,9 +1,10 @@
 ---
 import { site } from '../config/site';
 ---
-<footer class="footer">
-  <strong>{site.name}</strong>
-  <p>{site.tagline}</p>
-  <div>{site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>)}</div>
-  <small>© {new Date().getFullYear()} Wolff's Room.</small>
+<footer class="footer-wolf">
+  <div class="footer-logo-center"><a href="/"><img src="https://wolffsroom.wordpress.com/wp-content/uploads/2026/02/cropped-logosite.png" alt="Logo Wolff's Room" class="footer-wolf-img" /></a></div>
+  <div class="footer-social-icons">{site.socials.map((social) => <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>{social.label}</a>)}</div>
+  <div class="footer-banner-wrap"><img src="https://wolffsroom.wordpress.com/wp-content/uploads/2025/01/logo.png" alt="Wolff's Room" class="footer-main-logo" /></div>
+  <div class="footer-quote-card"><p class="quote-text">“Tudo o que temos de decidir é como jogar com o tempo que nos foi dado.”</p><span class="quote-author">Adaptado de Gandalf, em <cite>O Senhor dos Anéis</cite>, de J.R.R. Tolkien.</span></div>
+  <div class="footer-copyright"><p>© {new Date().getFullYear()} {site.name} — {site.tagline}</p></div>
 </footer>

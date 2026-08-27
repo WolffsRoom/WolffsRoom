@@ -1,0 +1,140 @@
+/* Estilo da Seção de Instalação e Downloads no padrão WordPress do Wolff's Room */
+.installation-download-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.installation-col,
+.download-col {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+
+.box-title-black {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+body.light-mode .box-title-black {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.installation-content-box {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--bg-dark);
+  margin-bottom: 20px;
+}
+
+.installation-content-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-sub);
+  margin-bottom: 12px;
+}
+
+.installation-content-box p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-link-box {
+  text-align: center;
+}
+
+.faq-link-box p {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  margin-bottom: 15px;
+}
+
+.btn-faq-black {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.btn-faq-black:hover {
+  background: #333333;
+}
+
+.download-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.download-option-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  text-decoration: none;
+  background: var(--bg-dark);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.download-option-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--color-secondary);
+}
+
+.download-option-item img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.download-option-item span {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: 1px;
+}
+
+.password-box-wolf {
+  background-color: var(--bg-dark);
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.password-box-wolf .pass-label {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+}
+
+.password-box-wolf .pass-val {
+  font-weight: 800;
+  font-size: 15px;
+  color: #f44336;
+  margin-left: 8px;
+}
