@@ -34,7 +34,7 @@
     >
   </a>
   &nbsp;
-  <a href="https://discord.com/invite/Cca7EHv79">
+  <a href="https://discord.com/invite/P47PNuP5aN">
     <img
       src="https://img.shields.io/badge/DISCORD-24292F?style=for-the-badge&logo=discord&logoColor=white"
       alt="Discord"
