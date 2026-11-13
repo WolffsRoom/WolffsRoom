@@ -1,12 +1,13 @@
 <p align="center">
   <a href="https://wolffsroom.dev">
     <img
-      src="https://wolffsroom.wordpress.com/wp-content/uploads/2025/01/logo.png"
+      src="https://github.com/user-attachments/assets/8781a061-0883-4eed-a808-21b8bd1febd4"
       alt="Wolff's Room"
       width="550"
     />
   </a>
 </p>
+
 
 <p align="center">
   Translations, ports, and tools for PlayStation Vita.
