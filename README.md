@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://wolffsroom.dev">
     <img
-      src="https://github.com/user-attachments/assets/8781a061-0883-4eed-a808-21b8bd1febd4"
+      src="https://github.com/user-attachments/assets/c2acc184-8c3c-4783-94f2-6e39216bf178"
       alt="Wolff's Room"
       width="550"
     />
